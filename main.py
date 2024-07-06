@@ -2,7 +2,8 @@ from os import system
 import psutil
 import datetime
 
-system('say Welcome Ashwin. Your system information is as follows:')
+name = 'Blesson'
+system(f'say Welcome {name}. Your system information is as follows:')
 
 #Read the date and time
 current_time = datetime.datetime.now()
