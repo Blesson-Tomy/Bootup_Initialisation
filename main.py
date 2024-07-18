@@ -15,14 +15,16 @@ battery = psutil.sensors_battery()
 string = current_time.strftime("%A, %B %d, %Y %H:%M")
 print(string)
 system(f'say today is {string}')
-
+st.write(f"Today is: {string}")
 #Read the battery percentage and speak it
 system(f'say Battery percentage is {battery.percent}%')
+st.write(f"Battery Percentage remaining is: {battery.percent}%")
 
 #Print battery information in the termainal
 if battery:
     print(f"Battery Percentage Remaining: {battery.percent}%")
     print(f"Power plugged in: {'Yes' if battery.power_plugged else 'No'}")
+    st.write("Power Adapter is plugged in and system is charging.")
 else:
     print("No battery information available.")
 
