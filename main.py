@@ -1,11 +1,12 @@
+import streamlit as st
 from os import system
 import psutil
 import datetime
-import streamlit as st
+
 
 name = 'Blesson'
 system(f'say Welcome {name}. Your system information is as follows:')
-
+st.write(f"{name}")
 #Read the date and time
 current_time = datetime.datetime.now()
 battery = psutil.sensors_battery()
